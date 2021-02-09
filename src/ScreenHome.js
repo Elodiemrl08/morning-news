@@ -17,7 +17,7 @@ function ScreenHome() {
                   <Input.Password className="Login-input" placeholder="password" />
             
 
-            <Link to="/screensource"><Button href="" style={{width:'80px'}} type="primary">Sign-in</Button></Link>
+            <Link to="/screensource"><Button style={{width:'80px'}} type="primary">Sign-in</Button></Link>
 
           </div>
 
@@ -30,7 +30,7 @@ function ScreenHome() {
                   <Input.Password className="Login-input" placeholder="password" />
             
 
-                  <Link to="/screensource"><Button href="" style={{width:'80px'}} type="primary">Sign-up</Button></Link>
+                  <Link to="/screensource"><Button style={{width:'80px'}} type="primary">Sign-up</Button></Link>
 
           </div>
 
