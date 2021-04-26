@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { useParams } from 'react-router-dom';
 import './App.css';
 import { Card, Icon, Modal} from 'antd';
 import Nav from './Nav'
@@ -6,16 +7,17 @@ import Nav from './Nav'
 const { Meta } = Card;
 
 function ScreenArticlesBySource(props) {
-
   const [articleList, setArticleList] = useState([])
 
   const [visible, setVisible] = useState(false)
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
 
+  var { id } = useParams();
+
   useEffect(() => {
     const findArticles = async() => {
-      const data = await fetch(`https://newsapi.org/v2/top-headlines?sources=${props.match.params.id}&apiKey=9de50ca6295d47e0855b01f48e9731fd`)
+      const data = await fetch(`https://newsapi.org/v2/top-headlines?sources=${id}&apiKey=b32c8b844d1243b1a7998d8228910f50`)
       const body = await data.json()
       console.log(body)
       setArticleList(body.articles) 
@@ -28,7 +30,6 @@ function ScreenArticlesBySource(props) {
     setVisible(true)
     setTitle(title)
     setContent(content)
-
   }
 
   var handleOk = e => {
