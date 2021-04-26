@@ -85,7 +85,7 @@ function ScreenArticlesBySource(props) {
                   onOk={handleOk}
                   onCancel={handleCancel}
                 >
-                  <p>{title}</p>
+                  <p>{content}</p>
                 </Modal>
 
               </div>
